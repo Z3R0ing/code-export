@@ -60,8 +60,9 @@ if os.path.isdir(directory_in_str):
         document.save(doc_file)
         print()
         print("Successfully export to word file! " + str(os.path._getfullpathname(doc_file)))
-        # remove temporary file
-        if os.path.isfile(output_file):
-            os.remove(output_file)
+    
+    # remove temporary file
+    if os.path.isfile(output_file):
+        os.remove(output_file)
 else:
     print("No such directory!")
