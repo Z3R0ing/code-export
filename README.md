@@ -2,6 +2,8 @@
 
 If you need to export all your project source code to a doc file, do it with this script.
 
+**N.B.** script recursively goes through directories and files
+
 ## Instruction
 1. Install dependencies
 ```bash
