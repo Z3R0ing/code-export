@@ -2,15 +2,20 @@ import os
 import pathlib
 from docx import Document
 
+#----Settings----
+
+#input repo for export
+directory_in_str = "/home/user/project"
+
+#extensions for export
+#extensions = list(['.html', '.css', '.js'])
+extensions = list(['.java'])
+
+#----------------
+
 #path to files
 output_file = 'test.temp'
 doc_file = 'res.docx'
-
-#input repo for export
-directory_in_str = input('Path to directory for export: ')
-
-#extensions for export
-extensions = list(['.html', '.css', '.js'])
 
 if os.path.isdir(directory_in_str):
 
@@ -59,7 +64,7 @@ if os.path.isdir(directory_in_str):
                 document.add_paragraph()
         document.save(doc_file)
         print()
-        print("Successfully export to word file! " + str(os.path._getfullpathname(doc_file)))
+        print("Successfully export to word file! " + str(os.path.abspath(doc_file)))
     
     # remove temporary file
     if os.path.isfile(output_file):
