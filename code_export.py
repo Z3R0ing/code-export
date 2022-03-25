@@ -8,8 +8,9 @@ from docx import Document
 directory_in_str = "/home/user/project"
 
 #extensions for export
-#extensions = list(['.html', '.css', '.js'])
-extensions = list(['.java'])
+extensions = list(['.html', '.css', '.js'])
+#Example for one element list:
+#extensions = list(['.java'])
 
 #----------------
 
